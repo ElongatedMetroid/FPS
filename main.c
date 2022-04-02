@@ -1,13 +1,9 @@
 #include <raylib.h>
-#include <stdio.h>
-
 #include <player.h>
 #include <level.h>
 
-#define MAX_COLUMNS 1
-
-#define SCREEN_WIDTH 1080
-#define SCREEN_HEIGHT 720
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
 
 Camera playerCamera = { 0 };
 
@@ -17,6 +13,7 @@ void Init(void){
     SetTargetFPS(60);
 
     InitPlayer(&playerCamera);
+    InitLevel();
 }
 
 void GameUpdate(void){
