@@ -9,6 +9,7 @@ typedef struct object{
     bool isValid;
     Vector3 position;
     Vector3 positionIfPlayerObj;
+    float scale;
     Vector3 size;
     float radius;
     Model model;

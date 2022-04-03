@@ -15,6 +15,7 @@ void DrawObjects(Object *objects){
                 DrawSphere(objects[i].position, objects[i].radius, objects[i].color);
                 break;
             case CUSTOM:
+                DrawModel(objects[i].model, objects[i].position, objects[i].scale, objects[i].color);
                 break;
         }
     }

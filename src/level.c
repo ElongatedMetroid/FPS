@@ -39,6 +39,14 @@ void InitLevel(void){
     levelData[5].size = (Vector3){32.0f, 5.0f, 1.0f};
     levelData[5].type = CUBE;
     levelData[5].color = GOLD;
+
+    levelData[6].isValid = true;
+    levelData[6].model = LoadModel("/media/Stuff500GB/repos/FPS/assets/mario/scene.gltf");
+    levelData[6].scale = 0.25f;
+    levelData[6].size = (Vector3){-2.0f, 2.0f, 2.0f};
+    levelData[6].position = (Vector3){-3.0f, 1.5f, 3.0f};
+    levelData[6].type = CUSTOM;
+    levelData[6].color = WHITE;
 }
 
 bool CheckLevelCollision(Camera *playerCamera){
