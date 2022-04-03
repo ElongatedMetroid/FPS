@@ -5,4 +5,6 @@
 
 BoundingBox MakeBoundingBox(Vector3 position, Vector3 size);
 
+extern float deltaTime;
+
 #endif
