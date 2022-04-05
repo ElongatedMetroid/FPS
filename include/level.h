@@ -10,6 +10,8 @@
 extern Object levelData[MAX_OBJ];
 
 void InitLevel(void);
-bool CheckLevelCollision(Camera *playerCamera);
+
+#define COLLISION_WITH_GROUND 2
+int CheckLevelCollision(Camera *playerCamera);
 
 #endif

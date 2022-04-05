@@ -7,6 +7,7 @@
 
 typedef struct object{
     bool isValid;
+    bool isGround;
     Vector3 position;
     Vector3 positionIfPlayerObj;
     float scale;

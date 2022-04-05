@@ -26,8 +26,9 @@ void UpdatePlayerPos(Camera *playerCamera){
 
     UpdateCamera(playerCamera);
 
-    if(CheckLevelCollision(playerCamera))
+    if(CheckLevelCollision(playerCamera) == true)
         playerCamera->position = OldPos;
+    else if(CheckLevelCollision(playerCamera) == COLLISION_WITH_GROUND){}
 }
 
 void UpdatePlayerObjects(Camera *playerCamera){
