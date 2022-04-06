@@ -11,10 +11,11 @@ void InitPlayer(Camera *playerCamera){
 
     SetCameraMode(*playerCamera, CAMERA_FIRST_PERSON); // Set a first person camera mode
 
+    // load player objects into memory (Objects that will stay in a position relative to the player)
     playerObjects[0].isValid = true;
     playerObjects[0].positionIfPlayerObj = (Vector3){0.5f, 0.5f, 1.0f};
     playerObjects[0].size = (Vector3){1.0f, 1.0f, 1.0f};
-    playerObjects[0].type = CUBE;
+    playerObjects[0].model = LoadModelFromMesh(GenMeshCube(1.0f, 1.0f, 1.0f));
     playerObjects[0].color = BLUE;
 }
 

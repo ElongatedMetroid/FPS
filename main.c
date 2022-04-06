@@ -2,6 +2,8 @@
 #include <player.h>
 #include <level.h>
 #include <draw.h>
+#define RLIGHTS_IMPLEMENTATION
+#include <lighting.h>
 #include <stdio.h>
 
 #define SCREEN_WIDTH 1920
@@ -18,6 +20,7 @@ void Init(void){
 
     InitPlayer(&playerCamera);
     InitLevel();
+    InitLighting();
 }
 
 float lastFrame = 0.0f, currentFrame = 0.0f;
@@ -35,6 +38,8 @@ void GameUpdate(void){
 
             DrawObjects(levelData);
             DrawObjects(playerObjects);
+
+            UpdateLighting(&playerCamera);
 
         EndMode3D();
 

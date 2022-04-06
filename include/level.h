@@ -6,6 +6,9 @@
 #include <util.h>
 #include <draw.h>
 #include <stddef.h>
+#include <stdio.h>
+
+#define MAX_OBJ 100
 
 extern Object levelData[MAX_OBJ];
 

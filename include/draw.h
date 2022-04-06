@@ -3,8 +3,6 @@
 
 #include <raylib.h>
 
-#define MAX_OBJ 100
-
 typedef struct object{
     bool isValid;
     bool isGround;
@@ -12,13 +10,7 @@ typedef struct object{
     Vector3 positionIfPlayerObj;
     float scale;
     Vector3 size;
-    float radius;
     Model model;
-    #define CUBE 0
-    #define PLANE 1
-    #define SPHERE 2
-    #define CUSTOM 3
-    int type;
     Color color;
 } Object;
 
