@@ -16,7 +16,7 @@ void InitLighting(void){
         levelData[i].model.materials[0].shader = shader;
     }
 
-    light = CreateLight(LIGHT_DIRECTIONAL, (Vector3){0.0f, 64.0f, 0.0f}, (Vector3){10.0f, 0.0f, 0.0f}, WHITE, shader);
+    light = CreateLight(LIGHT_DIRECTIONAL, (Vector3){0.0f, 64.0f, 0.0f}, (Vector3){0.0f, 0.0f, 0.0f}, WHITE, shader);
 }
 
 void UpdateLighting(Camera *playerCamera){

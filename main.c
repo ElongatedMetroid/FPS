@@ -2,6 +2,7 @@
 #include <player.h>
 #include <level.h>
 #include <draw.h>
+#include <audio.h>
 #define RLIGHTS_IMPLEMENTATION
 #include <lighting.h>
 #include <stdio.h>
@@ -21,6 +22,7 @@ void Init(void){
     InitPlayer(&playerCamera);
     InitLevel();
     InitLighting();
+    InitAudio();
 }
 
 float lastFrame = 0.0f, currentFrame = 0.0f;
@@ -40,7 +42,8 @@ void GameUpdate(void){
             DrawObjects(playerObjects);
 
             UpdateLighting(&playerCamera);
-
+            UpdateAudio();
+            
         EndMode3D();
 
     char FPS[255];
